@@ -3,3 +3,27 @@ table td  {
   padding: 5px;
   font-size: 12px;
 }
+
+h1.ant-typography, .ant-typography h1 {
+  color: white;
+  font:inherit;
+  font-size:35px;
+}
+
+.ant-typography {
+  text-align: center;
+  color: white;
+}
+.typographyContainer {
+  padding : 6em 0 8em 0;
+}
+
+.frontCard {
+  min-height: 300px;
+  max-height: 300px;
+  overflow: auto;
+  background-color: white;
+  text-align:center;
+  border-radius: 5px;
+  box-shadow: 0 16px 24px 2px rgba(0,29,63,0.14);
+}

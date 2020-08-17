@@ -1,29 +1,35 @@
 import React from 'react';
-import { Layout, Typography, Button } from 'antd';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import './App.css';
-import MainNav from './components/mainNav.js';
-import Main from './pages/main.js';
+import MainPage from './pages/main.js';
+import AboutPage from './pages/about.js';
+import ContactPage from './pages/contact.js';
+import ProductsPage from './pages/products.js';
 
-const { Header, Content, Footer } = Layout;
-const { Title, Paragraph } = Typography;
+
 
 function App() {
   return (
-    <Layout className="layout">
-      <Header>
-        <MainNav/>
-        <Typography>
-          <Title>Vi recondar, <br/>reparerar och återvinner!</Title>
-          <Button ghost>Produkter</Button>
-        </Typography>
-      </Header>
-      <Content className="site-layout-content">
-        <Main/>
-      </Content>
-      <Footer style={{ textAlign: 'center', bottom: 0}}>
-        Copyright © 2020    Batterirecond Trading i Sverige AB, Järnmalmsgatan 1,  417 07 Göteborg, Tel:  031- 51 81 39
-      </Footer>
-    </Layout>
+    <Router>
+    <Switch>
+          <Route path="/about">
+            <AboutPage/>
+          </Route>
+          <Route path="/contact">
+            <ContactPage/>
+          </Route>
+          <Route path="/products">
+            <ProductsPage/>
+          </Route>
+          <Route exact path="/">
+            <MainPage />
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 

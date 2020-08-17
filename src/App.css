@@ -11,13 +11,19 @@
 
 .site-layout-content {
   background-color: white;
+  margin: 0 0.5em;
+  border-radius: 5px 5px 0 0;
+}
+
+.ant-layout-footer {
+  margin: 0 0.5em;
 }
 
 .ant-layout-header {
   height: 100%;
   background: none;
   line-height: initial;
-  padding: 0 0 3em 0;
+  padding: 0;
   border-radius: 0 0 5px 5px;
   border-bottom: 1em solid rgba(0, 0, 0, 0.3);
 }

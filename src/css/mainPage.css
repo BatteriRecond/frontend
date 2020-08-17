@@ -6,8 +6,9 @@ table td  {
 
 h1.ant-typography, .ant-typography h1 {
   color: white;
+  font-weight: bold;
   font:inherit;
-  font-size:35px;
+  font-size:50px;
 }
 
 .ant-typography {
@@ -16,6 +17,10 @@ h1.ant-typography, .ant-typography h1 {
 }
 .typographyContainer {
   padding : 6em 0 8em 0;
+}
+
+.ant-card-head-title{
+  font-size: 16px;
 }
 
 .frontCard {

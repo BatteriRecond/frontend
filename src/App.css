@@ -25,4 +25,15 @@
   border-radius: 0 0 5px 5px;
 }
 
+h1.ant-typography, .ant-typography h1 {
+  color: white;
+  font:inherit;
+  font-size:35px;
+}
+
+.ant-typography {
+  text-align: center;
+  color: white;
+  padding-top: 1em;
+}
 

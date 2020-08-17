@@ -4,3 +4,32 @@
   margin : auto;
   padding : 1em 0;
   }
+
+.horizontalMenu {
+  padding: 2em 3em 2em 1em;
+  border: none;
+  color: white;
+  background: none;
+  font-size: 20px;
+}
+
+.verticalMenu {
+  border: none;
+  background: none;
+  font-size: 20px;
+  padding-top: 1em;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) >.ant-menu-item{
+  padding: 0.5em 1em;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) >.ant-menu-item:hover{
+  color: firebrick;
+  border-bottom: 2px solid firebrick;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected {
+  color: firebrick;
+  border-bottom: 2px solid firebrick;
+}

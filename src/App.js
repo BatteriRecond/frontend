@@ -12,11 +12,8 @@ function App() {
     <Layout className="layout">
       <Header>
         <MainNav/>
-        <Typography style={{textAlign:'center', color: 'white', paddingTop: '2em'}}>
-          <Title style={{ color: 'white'}}>Välkommen!</Title>
-          <Paragraph style={{color: 'white'}}>
-            Vi recondar, reparerar och återvinner
-          </Paragraph>
+        <Typography>
+          <Title>Vi recondar, <br/>reparerar och återvinner!</Title>
           <Button ghost>Produkter</Button>
         </Typography>
       </Header>

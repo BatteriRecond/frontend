@@ -25,8 +25,8 @@ export default function MainNav (props){
           <Col xs={{ span:18 }} sm={{span:18}} md={{span:11, offset:1}} lg={{span:11, offset:1}}>
             <img src={Logo} className='logo' alt="Smiley face"/>
           </Col>
-          <Col xs={{ span:0}} sm={{span:0}} md={{ span:9, offset:3}} lg={{span:9, offset:3}}>
-            <Menu style={{ padding: '2em 3em 2em 1em', border: 'none', color:'white', background:'none', fontSize:'20px' }}  mode="horizontal" >
+          <Col xs={{ span:0}} sm={{span:0}} md={{ span:10, offset:2}} lg={{span:10, offset:2}}>
+            <Menu className='horizontalMenu' mode="horizontal" >
                 <Menu.Item key="1">PRODUKTER</Menu.Item>
                 <Menu.Item key="2">OM OSS</Menu.Item>
                 <Menu.Item key="3">HITTA HIT</Menu.Item>
@@ -43,10 +43,10 @@ export default function MainNav (props){
               footerStyle={{textAlign:'center', background: '#f0f2f5', }}
               footer={
                 <div>
-                  Copyright © 2020    Batterirecond Trading i Sverige AB, Järnmalmsgatan 1,  417 07 Göteborg, Tel:  031- 51 81 39
+                  Batterirecond <br/> Järnmalmsgatan 1 <br/>  417 07 Göteborg <br/>Tel:  031- 51 81 39
                 </div>
               }>
-              <Menu style={{ border: 'none', background:'none', fontSize:'20px', paddingTop:'1em' }} mode="vertical">
+              <Menu className='verticalMenu' mode="vertical">
                     <Menu.Item key="1">PRODUKTER</Menu.Item>
                     <Menu.Item key="2">OM OSS</Menu.Item>
                     <Menu.Item key="3">HITTA HIT</Menu.Item>

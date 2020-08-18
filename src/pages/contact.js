@@ -1,7 +1,10 @@
 import React from 'react';
-import { Layout, Row, Col, Card } from 'antd';
+import { Layout, Row, Col, Card, Typography } from 'antd';
+import MapContainer from '../components/googleMaps.js'
 import MainNav from '../components/mainNav.js';
+import '../css/contactPage.css'
 const { Header, Content, Footer } = Layout;
+const { Title } = Typography;
 
 export default class ContactPage extends React.Component {
 
@@ -10,19 +13,25 @@ export default class ContactPage extends React.Component {
       <Layout className="layout">
       <Header>
         <MainNav/>
+        <Typography>
+          <Title>Kontakta oss</Title>
+        </Typography>
       </Header>
-      <Content className="site-layout-content">
+      <Content className="site-layout-content contactContent">
         <Row>
-          <Col>
-            <Card title="ADDRESS">
+          <Col span={24} className='mapcontainer'>
+            <MapContainer />
+          </Col>
+        </Row>
+        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={{margin:'auto'}} justify="space-around" align="middle">
+          <Col span={12} >
+            <Card title="ADDRESS" className='contactCard'>
               <p>
               Batterirecond Trading i Sverige AB <br/>
               Järnmalmsgatan 1 <br/>
               417 07 Göteborg
               </p>
             </Card>
-          </Col>
-          <Col>
           </Col>
         </Row>
       </Content>

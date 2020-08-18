@@ -1,0 +1,8 @@
+
+.mapcontainer{
+  min-height: 250px;
+  max-height: 250px;
+  border-radius: 5px;
+  overflow: auto;
+  padding-left: 0;
+}

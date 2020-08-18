@@ -1,7 +1,8 @@
 import React from 'react';
-import { Layout } from 'antd';
+import { Layout, Typography } from 'antd';
 import MainNav from '../components/mainNav.js';
 const { Header, Content, Footer } = Layout;
+const { Title } = Typography;
 
 export default class ProductsPage extends React.Component {
 
@@ -10,6 +11,9 @@ export default class ProductsPage extends React.Component {
       <Layout className="layout">
       <Header>
         <MainNav/>
+        <Typography>
+          <Title>Produkter</Title>
+        </Typography>
       </Header>
       <Content className="site-layout-content">
         Produkter

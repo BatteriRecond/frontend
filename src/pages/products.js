@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Typography } from 'antd';
+import { Layout, Typography, Row, Col } from 'antd';
 import MainNav from '../components/mainNav.js';
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -16,7 +16,14 @@ export default class ProductsPage extends React.Component {
         </Typography>
       </Header>
       <Content className="site-layout-content">
-        Produkter
+        <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 },24]} justify="space-around">
+          <Col>
+          produkt
+          </Col>
+          <Col>
+          produkt
+          </Col>
+        </Row>
       </Content>
       <Footer style={{ textAlign: 'center', bottom: 0}}>
         Copyright © 2020    Batterirecond Trading i Sverige AB, Järnmalmsgatan 1,  417 07 Göteborg, Tel:  031- 51 81 39

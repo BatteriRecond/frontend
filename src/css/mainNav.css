@@ -25,7 +25,7 @@
 
 .ant-menu-vertical:not(.ant-menu-dark) > .ant-menu-item-selected {
   background: none;
-  border-bottom: 2px solid firebrick;
+  border-bottom: none;
 }
 
 .ant-menu-vertical:not(.ant-menu-dark) > .ant-menu-item-selected a {
@@ -37,18 +37,33 @@
   color : white;
 }
 
-.ant-menu-horizontal:not(.ant-menu-dark) >.ant-menu-item a:hover{
+.ant-menu-horizontal:not(.ant-menu-dark) >.ant-menu-item a:hover
+{
   color : firebrick;
+  border-bottom: none;
 }
 
-.ant-menu-horizontal:not(.ant-menu-dark) >.ant-menu-item:hover{
-  border-bottom: 2px solid firebrick;
+.ant-menu-horizontal >.ant-menu-item,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal >.ant-menu-item:hover {
+  border-bottom: none;
+}
+.ant-menu-item-only-child{
+  border-bottom: none;
 }
 
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected {
-  border-bottom: 2px solid firebrick;
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected a{
+  color : firebrick;
+  border-bottom: none;
 }
 
-.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected a {
+.ant-menu .verticalMenu ant-menu-light ant-menu-root ant-menu-vertical{
   color: firebrick;
+}
+
+.ant-menu-item:hover,
+.ant-menu-item a:hover {
+  color: firebrick;
+  border-bottom: none;
 }

@@ -12,13 +12,7 @@ import '../css/mainNav.css';
 
 export default function MainNav (props){
 
-  const [visible, setVisible] = useState(false);
-  const showDrawer = () => {
-    setVisible(true);
-  };
-  const onClose = () => {
-    setVisible(false);
-  };
+  const [visible, setVisible] = useState( false );
 
   const location = useLocation();
 
@@ -28,7 +22,12 @@ export default function MainNav (props){
 
     return(
       <Row>
-          <Col xs={{ span:6}} sm={{span:6}} md={{span:0}} lg={{span:0}} style={{color:'white', fontSize:'40px', padding: '0.5em'}} onClick={showDrawer}>
+          <Col xs={{ span:6}}
+               sm={{span:6}}
+               md={{span:0}}
+               lg={{span:0}}
+               style={{color:'white', fontSize:'40px', padding: '0.5em'}}
+               onClick={() => setVisible(true)}>
             <MenuOutlined style={{float:'left'}} />
           </Col>
           <Col xs={{ span:18 }} sm={{span:18}} md={{span:11, offset:1}} lg={{span:11, offset:1}}>
@@ -37,8 +36,7 @@ export default function MainNav (props){
           <Col xs={{ span:0}} sm={{span:0}} md={{ span:12}} lg={{span:12}}>
             <Menu className='horizontalMenu' mode="horizontal" style={{float:'right'}}>
                 <Menu.Item className={ isActive('products') } key="1"><Link to="/products">PRODUKTER</Link></Menu.Item>
-                <Menu.Item className={ isActive('about') }key="2"><Link to="/about">VÅR HISTORIA</Link></Menu.Item>
-                <Menu.Item className={ isActive('contact') }key="3"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
+                <Menu.Item className={ isActive('contact') } key="2"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
             </Menu>
           </Col>
 
@@ -47,7 +45,7 @@ export default function MainNav (props){
               closable={true}
               visible={visible}
               key='left'
-              onClose={onClose}
+              onClose={() => setVisible(false)}
               drawerStyle={{textAlign:'left'}}
               footerStyle={{textAlign:'center', background: '#f0f2f5', }}
               footer={
@@ -58,8 +56,7 @@ export default function MainNav (props){
               <Link to="/"><img src={Logo} className='logo' alt="Smiley face"/></Link>
               <Menu className='verticalMenu' mode="vertical">
                 <Menu.Item className={ isActive('products') } key="1"><Link to="/products">PRODUKTER</Link></Menu.Item>
-                <Menu.Item className={ isActive('about') }key="2"><Link to="/about">VÅR HISTORIA</Link></Menu.Item>
-                <Menu.Item className={ isActive('contact') }key="3"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
+                <Menu.Item className={ isActive('contact') }key="2"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
               </Menu>
           </Drawer>
         </Row>

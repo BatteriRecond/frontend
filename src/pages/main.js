@@ -1,8 +1,7 @@
 import React from 'react';
-import { Layout, Typography, Button, Row, Col, Card } from 'antd';
-import ForkLift from "../images/redForklift.jpeg";
-import { Carousel } from 'antd';
-import { StarFilled } from '@ant-design/icons';
+import { Layout, Typography, Button, Row, Col, Card, Carousel, Rate } from 'antd';
+import { Link } from "react-router-dom";
+import { ClockCircleOutlined, CommentOutlined } from '@ant-design/icons';
 import MainNav from '../components/mainNav.js';
 import '../css/mainPage.css';
 
@@ -11,10 +10,9 @@ const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 
 const contentStyle = {
-  padding:'2em',
   color: 'grey',
   textAlign: 'center',
-  fontSize: '14px',
+  fontSize: '18px',
 };
 
 export default class MainPage extends React.Component {
@@ -26,10 +24,10 @@ export default class MainPage extends React.Component {
         <MainNav/>
         <Typography className='typographyContainer'>
           <Title>Vi rekondar, <br/>reparerar och återvinner!</Title>
-          <Button ghost>Produkter</Button>
+          <Link to="/products"><Button ghost>Produkter</Button></Link>
         </Typography>
       </Header>
-      <Content className="site-layout-content">
+      <Content className="site-layout-content mobileCss">
         <Main/>
       </Content>
       <Footer style={{ textAlign: 'center', bottom: 0}}>
@@ -42,9 +40,9 @@ export default class MainPage extends React.Component {
 
 const Main = () => {
   return(
-    <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={{margin:'-5em 0 0 0'}} justify="space-around" align="middle">
-    <Col xs={{order:2, span: 24 }} sm={{ order:2, span: 24}} md={{ order:1, span: 7 }} lg={{ order:1, span: 7 }}>
-    <Card size='small' title="KUNDRECENSIONER" className='frontCard'>
+    <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 },32]} style={{margin:'-5em 0 0 0'}} justify="space-around" align="bottom">
+    <Col xs={{order:2, span: 24 }} sm={{ order:2, span: 24}} md={{ order:1, span: 11 }} lg={{ order:1, span: 11 }}>
+    <Card size='default' title={<> <CommentOutlined /> &nbsp; KUNDRECENSIONER </> } className='frontCard'>
         <Carousel autoplay>
           <div>
               <p style={contentStyle}>
@@ -52,7 +50,7 @@ const Main = () => {
                 Bra priser och väldigt positivt på alla sätt. <br/>
                 Kommer gärna tillbaka" <br/>
                 <br/>
-                  -Kund <StarFilled /> <StarFilled /> <StarFilled /> <StarFilled /> <StarFilled />
+                  -Kund <Rate disabled defaultValue={5} />
             </p>
           </div>
           <div>
@@ -60,52 +58,31 @@ const Main = () => {
                 "Trevligt folk, bra batterier, bra priser. <br/>
                 Har handlat här i 20 år till alla bilar, båtar och lastbilar. 👍👌👏" <br/>
                 <br/>
-                -Kund <StarFilled /> <StarFilled /> <StarFilled /> <StarFilled /> <StarFilled />
+                -Kund <Rate disabled defaultValue={5} />
               </p>
           </div>
         </Carousel>
       </Card>
     </Col>
-    <Col xs={{order:1, span: 24}} sm={{ order:1, span: 24}} md={{ order:2, span: 7 }} lg={{ order:2, span: 7 }}>
-      <Card size="small" title="ÖPPETTIDER" className='frontCard'>
-          <p>Mån-Fre 08:00-16:30</p>
+    <Col xs={{order:1, span: 24}} sm={{ order:1, span: 24}} md={{ order:2, span: 11 }} lg={{ order:2, span: 11 }}>
+      <Card size="default" title={<><ClockCircleOutlined /> &nbsp; ÖPPETTIDER</> } className='frontCard'>
+          <p style={{fontSize:'18px'}}>Mån-Fre 08:00-16:00</p>
           <br/>
-          <h4>Avvikande Öppettider:</h4>
-          <table>
-            <td style={{borderRight: '1px solid lightgrey'}}>
-              <tr>
-                Trettondagsafton	Stängt
-              </tr>
-              <tr>
-                Skärtorsdag	Stängt
-              </tr>
-              <tr>
-                Valborgmässoafton	Stängt
-              </tr>
-              <tr>
-                Dag före Kristi Himmelfärdsdag	Stängt
-              </tr>
-            </td>
-            <td>
-              <tr>
-                Midsommarafton	Stängt
-              </tr>
-              <tr>
-                Dag före Alla Helgons dag	Stängt
-              </tr>
-              <tr>
-                Julafton	Stängt
-              </tr>
-              <tr>
-                Nyårsafton	Stängt
-              </tr>
-            </td>
-          </table>
-      </Card>
-    </Col>
-    <Col xs={{order:3, span: 0}} sm={{ order:3, span: 0}} md={{ order:3, span: 7 }} lg={{ order:3, span: 7 }}>
-      <Card size='small' title="HITTA HIT" className='frontCard'>
-        <img style={{maxWidth:'100%'}} src={ForkLift} alt="forklift" />
+          <h4 style={{fontWeight:'bold'}}>Avvikande Öppettider:</h4>
+          <Row>
+            <Col span={12}>
+            Trettondagsafton Stängt <br/>
+            Skärtorsdag Stängt <br/>
+            Valborgmässoafton Stängt <br/>
+            Dag före Kristi Himmelfärdsdag Stängt <br/>
+            </Col>
+            <Col span={12}>
+            Midsommarafton Stängt <br/>
+            Dag före Alla Helgons dag Stängt <br/>
+            Julafton Stängt <br/>
+            Nyårsafton Stängt <br/>
+            </Col>
+          </Row>
       </Card>
     </Col>
   </Row>

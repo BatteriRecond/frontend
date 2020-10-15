@@ -11,7 +11,7 @@ h1.ant-typography, .ant-typography h1 {
   color: white;
 }
 .typographyContainer {
-  height: 45vh;
+  height: 50vh;
   display: table-cell;
   vertical-align: middle;
   padding: 0 1em 4em 1em;
@@ -23,7 +23,7 @@ h1.ant-typography, .ant-typography h1 {
   font-size: 20px;
 }
 
-.frontCard {
+.front-card {
   min-height: 35vh;
   max-height: 35vh;
   overflow: auto;
@@ -33,14 +33,32 @@ h1.ant-typography, .ant-typography h1 {
   box-shadow: 0 16px 24px 2px rgba(0,29,63,0.14);
 }
 
+.review-carousel {
+  padding-top:1em;
+}
+
 .ant-btn:hover {
   color: firebrick;
   border-color: firebrick;
 }
 
 @media only screen and (max-width: 768px) {
-  .frontCard {
+  .ant-layout-header,
+  .typographyContainer {
+    height: 100%;
+  }
+  h1.ant-typography, .ant-typography h1 {
+    margin-top:1em;
+    font-size:30px;
+  }
+
+  .site-layout-content {
+    background: none;
+  }
+
+  .front-card {
     min-height: 100%;
     max-height: 100%;
+    margin: 0 1em;
   }
 }

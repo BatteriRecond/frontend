@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Typography, Button, Row, Col, Card, Carousel, Rate } from 'antd';
+import { Layout, Typography, Button, Row, Col, Card, Carousel, Rate, Comment, Avatar } from 'antd';
 import { Link } from "react-router-dom";
 import { ClockCircleOutlined, CommentOutlined } from '@ant-design/icons';
 import MainNav from '../components/mainNav.js';
@@ -9,12 +9,6 @@ import '../css/mainPage.css';
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 
-const contentStyle = {
-  color: 'grey',
-  textAlign: 'center',
-  fontSize: '18px',
-};
-
 export default class MainPage extends React.Component {
 
   render(){
@@ -23,14 +17,14 @@ export default class MainPage extends React.Component {
       <Header className='mainHeader'>
         <MainNav/>
         <Typography className='typographyContainer'>
-          <Title>Vi rekondar, <br/>reparerar och återvinner!</Title>
+          <Title>Vi rekondar, säljer <br/> och köper batterier & truckar!</Title>
           <Link to="/products"><Button ghost>Produkter</Button></Link>
         </Typography>
       </Header>
-      <Content className="site-layout-content mobileCss">
+      <Content className="site-layout-content">
         <Main/>
       </Content>
-      <Footer style={{ textAlign: 'center', bottom: 0}}>
+      <Footer>
         Copyright © 2020    Batterirecond Trading i Sverige AB, Järnmalmsgatan 1,  417 07 Göteborg, Tel:  031- 51 81 39
       </Footer>
     </Layout>
@@ -38,51 +32,73 @@ export default class MainPage extends React.Component {
   }
 }
 
+const reviews = [
+  {
+    text : <>Jag fick tips och goda råd i allmänhet av den trevliga personalen kring allt med laddning och underhåll. <br/>Bra priser och väldigt positivt på alla sätt. Kommer gärna tillbaka.</>
+  },
+  {
+    text : <>Trevligt folk, bra batterier, bra priser. <br/> Har handlat här i 20 år till alla bilar, båtar och lastbilar. 👍👌👏</>
+  },
+]
+
 const Main = () => {
   return(
-    <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 },32]} style={{margin:'-5em 0 0 0'}} justify="space-around" align="bottom">
-    <Col xs={{order:2, span: 24 }} sm={{ order:2, span: 24}} md={{ order:1, span: 11 }} lg={{ order:1, span: 11 }}>
-    <Card size='default' title={<> <CommentOutlined /> &nbsp; KUNDRECENSIONER </> } className='frontCard'>
-        <Carousel autoplay>
-          <div>
-              <p style={contentStyle}>
-                "Jag fick tips och goda råd i allmänhet av den trevliga personalen kring allt med laddning och underhåll.<br/>
-                Bra priser och väldigt positivt på alla sätt. <br/>
-                Kommer gärna tillbaka" <br/>
-                <br/>
-                  -Kund <Rate disabled defaultValue={5} />
-            </p>
-          </div>
-          <div>
-              <p style={contentStyle}>
-                "Trevligt folk, bra batterier, bra priser. <br/>
-                Har handlat här i 20 år till alla bilar, båtar och lastbilar. 👍👌👏" <br/>
-                <br/>
-                -Kund <Rate disabled defaultValue={5} />
-              </p>
-          </div>
+    <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 },32]} justify="space-around" align="middle">
+      <Col xs={{span: 0}} sm={{ span: 0}} md={{ span: 0 }} lg={{ order: 1, span: 5, offset:1 }}>
+      <h1>VÄLOMNA TILL OSS <br/>  PÅ RINGÖN </h1>
+      <p>
+        Hos oss finner ni kunnig personal och prisvädra produkter. Vi har de mesta inom branchen
+      </p>
+      </Col>
+    <Col xs={{order:2, span: 24 }} sm={{ order:2, span: 24}} md={{ order:2, span: 24 }} lg={{ order:3, span: 6, }}>
+      <Card size='default' bordered={ false } className='front-card'>
+        <Carousel autoplay className='review-carousel'>
+          { reviews.map( (review, index ) =>
+          <Comment
+          key={ index }
+          author='Kund'
+          avatar={
+              <Avatar
+                src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                alt="Customer"
+              />
+          }
+          content={
+            <>
+            <p style={{textAlign:'left'}}>{review.text} </p>
+            <Rate disabled defaultValue={5}/>
+            </>
+          }
+          />
+          )}
         </Carousel>
       </Card>
     </Col>
-    <Col xs={{order:1, span: 24}} sm={{ order:1, span: 24}} md={{ order:2, span: 11 }} lg={{ order:2, span: 11 }}>
-      <Card size="default" title={<><ClockCircleOutlined /> &nbsp; ÖPPETTIDER</> } className='frontCard'>
-          <p style={{fontSize:'18px'}}>Mån-Fre 08:00-16:00</p>
-          <br/>
-          <h4 style={{fontWeight:'bold'}}>Avvikande Öppettider:</h4>
-          <Row>
-            <Col span={12}>
-            Trettondagsafton Stängt <br/>
-            Skärtorsdag Stängt <br/>
-            Valborgmässoafton Stängt <br/>
-            Dag före Kristi Himmelfärdsdag Stängt <br/>
-            </Col>
-            <Col span={12}>
-            Midsommarafton Stängt <br/>
-            Dag före Alla Helgons dag Stängt <br/>
-            Julafton Stängt <br/>
-            Nyårsafton Stängt <br/>
-            </Col>
-          </Row>
+    <Col xs={{order:1, span: 24}} sm={{ order:1, span: 24}} md={{ order:1, span: 24 }} lg={{ order:2, span: 9 }}>
+      <Card size="default" title={<><ClockCircleOutlined /> &nbsp; ÖPPETTIDER</> } className='front-card'>
+        <Row align='middle' justify="space-between">
+          <Col xs={{ span: 24}} sm={{ span: 24}} md={{ span: 24 }} lg={{ span: 8 }}>
+            <p style={{fontSize:'18px'}}>Vardagar <br/> 08:00-16:00</p>
+            <p style={{fontSize:'18px'}}>Helger <br/> Stängt </p>
+          </Col>
+          <Col xs={{ span: 24}} sm={{ span: 24}} md={{ span: 24 }} lg={{ span: 16 }}>
+            <h4 style={{fontWeight:'bold'}}>Avvikande Öppettider:</h4>
+            <Row>
+              <Col span={12}>
+              Trettondagsafton Stängt <br/>
+              Skärtorsdag Stängt <br/>
+              Valborgmässoafton Stängt <br/>
+              Dag före Kristi Himmelfärdsdag Stängt <br/>
+              </Col>
+              <Col span={12}>
+              Midsommarafton Stängt <br/>
+              Dag före Alla Helgons dag Stängt <br/>
+              Julafton Stängt <br/>
+              Nyårsafton Stängt <br/>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
       </Card>
     </Col>
   </Row>

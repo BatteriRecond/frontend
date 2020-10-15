@@ -21,8 +21,22 @@
   padding-top: 1em;
 }
 
+.drawer-logo-text,
+.logo-text {
+  margin-bottom: 0;
+  color:firebrick;
+  font-family: Lato, sans-serif;
+  text-shadow: 2px 2px rgba(0,29,63,0.4);
+}
 
+h1.logo-text {
+  font-size: 48px;
+}
 
+h2.logo-text {
+  font-size: 30px;
+  line-height: 10px;
+}
 .ant-menu-vertical:not(.ant-menu-dark) > .ant-menu-item-selected {
   background: none;
   border-bottom: none;

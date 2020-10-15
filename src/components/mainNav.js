@@ -7,6 +7,7 @@ import {  Menu, Row, Col, Drawer } from 'antd';
 import Logo from "../images/logo.png";
 import { MenuOutlined } from '@ant-design/icons';
 import '../css/mainNav.css';
+import ForkLift from '../images/redForklift.jpeg';
 
 
 
@@ -31,12 +32,19 @@ export default function MainNav (props){
             <MenuOutlined style={{float:'left'}} />
           </Col>
           <Col xs={{ span:18 }} sm={{span:18}} md={{span:11, offset:1}} lg={{span:11, offset:1}}>
-          <Link to="/"><img src={Logo} className='logo' alt="Smiley face"/></Link>
+          <Link to="/">
+           { true &&  <>
+            <h1 className='logo-text'>BATTERI </h1>
+            <h2 className='logo-text'> RECOND AB</h2>
+            </> }
+            { false && <img src={Logo} className='logo' alt="Smiley face"/>}
+          </Link>
           </Col>
           <Col xs={{ span:0}} sm={{span:0}} md={{ span:12}} lg={{span:12}}>
             <Menu className='horizontalMenu' mode="horizontal" style={{float:'right'}}>
-                <Menu.Item className={ isActive('products') } key="1"><Link to="/products">PRODUKTER</Link></Menu.Item>
-                <Menu.Item className={ isActive('contact') } key="2"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
+                <Menu.Item className={ isActive('') } key="1"><Link to="/">HEM</Link></Menu.Item>
+                <Menu.Item className={ isActive('products') } key="2"><Link to="/products">PRODUKTER</Link></Menu.Item>
+                <Menu.Item className={ isActive('contact') } key="3"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
             </Menu>
           </Col>
 
@@ -48,16 +56,24 @@ export default function MainNav (props){
               onClose={() => setVisible(false)}
               drawerStyle={{textAlign:'left'}}
               footerStyle={{textAlign:'center', background: '#f0f2f5', }}
+              title={<Link to="/">
+                <>
+                <h1 className='drawer-logo-text'> BATTERI </h1>
+                <h2 className='drawer-logo-text'> RECOND AB</h2>
+                </>
+                { false && <img src={Logo} className='logo' alt="Smiley face"/> }
+                </Link>}
               footer={
                 <div>
                   Batterirecond <br/> Järnmalmsgatan 1 <br/>  417 07 Göteborg <br/>Tel:  031- 51 81 39
                 </div>
               }>
-              <Link to="/"><img src={Logo} className='logo' alt="Smiley face"/></Link>
               <Menu className='verticalMenu' mode="vertical">
-                <Menu.Item className={ isActive('products') } key="1"><Link to="/products">PRODUKTER</Link></Menu.Item>
-                <Menu.Item className={ isActive('contact') }key="2"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
+                <Menu.Item className={ isActive('') } key="1"><Link to="/">HEM</Link></Menu.Item>
+                <Menu.Item className={ isActive('products') } key="2"><Link to="/products">PRODUKTER</Link></Menu.Item>
+                <Menu.Item className={ isActive('contact') }key="3"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
               </Menu>
+            <img alt="forklift" src={ForkLift} style={{maxWidth:'100%', bottom: '150px', position:'absolute'}}/>
           </Drawer>
         </Row>
     )

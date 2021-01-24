@@ -5,7 +5,7 @@ import ProductContent from '../components/productContent.js'
 import '../css/productPage.css'
 import ForkLift from '../images/forklift.jpeg';
 import AgmBattery from '../images/AGM_Batteries.gif'
-import CarStartBattery from '../images/battery-start.png';
+import CarStartBattery from '../images/car-battery.jpeg';
 import CarBattery from '../images/car_battery.jpeg';
 import TruckStartBattery from '../images/truck_battery.jpeg';
 import ForkLiftBattery from '../images/forklift_battery.jpeg';
@@ -66,8 +66,10 @@ const productList = [
     description : 'Beskrivning',
     showMoreBtn : false,
     content : <>
-      Vi har lång erfarehet av att rekonda truckar. <br/>
-      Ring eller maila för aktuella försäljningar.
+      Vi har ett stort utbud av begagnade truckar. 
+      <br/>
+      <br/>
+      Ring eller maila för mer info.
     </>,
     imgSrcs : [ ForkLift ],
   },
@@ -106,7 +108,7 @@ const productList = [
               BATTERI RECOND, <br/>
               WATT YOU NEED!<br/>
             </i></h1>
-              Hos oss finner ni kunnig personal och prisvädra produkter. Vi har de mesta inom branchen.
+              Hos oss finner ni kunnig personal och prisvärda produkter. Vi har de mesta inom branschen.
           </div>
           <video width="100%" autoPlay muted loop src={ BatteriRecondVideoDesktop } type="video/mp4" className='video-ad'/>
           </div>

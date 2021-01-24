@@ -110,7 +110,7 @@ const productList = [
             </i></h1>
               Hos oss finner ni kunnig personal och prisvärda produkter. Vi har de mesta inom branschen.
           </div>
-          <video width="100%" autoPlay muted loop src={ BatteriRecondVideoDesktop } type="video/mp4" className='video-ad'/>
+          <video width="100%" playsInline autoPlay muted loop src={ BatteriRecondVideoDesktop } type="video/mp4" className='video-ad'/>
           </div>
           </Col>
            <Col xs={{ span: 22 }} sm={{ span: 22 }} md={{ span: 22 }} lg={{ span:18 }}>
@@ -150,7 +150,7 @@ const productList = [
           </Col>
 
         <Col xs={{ span: 22 }} sm={{ span: 22 }} md={{ span: 22 }} lg={{ span: 0 }}>
-          <video autoPlay muted loop src={ BatteriRecondVideoMobile } type="video/mp4" className='video-ad-mobile'/>
+          <video autoPlay muted loop playsInline src={ BatteriRecondVideoMobile } type="video/mp4" className='video-ad-mobile'/>
         </Col>
         </Row>
       </Content>

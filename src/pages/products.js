@@ -4,8 +4,12 @@ import MainNav from '../components/mainNav.js';
 import ProductContent from '../components/productContent.js'
 import '../css/productPage.css'
 import ForkLift from '../images/forklift.jpeg';
-import StartBattery from '../images/battery-start.png';
-import RegularBatteries from '../images/batteries-regular.png';
+import AgmBattery from '../images/AGM_Batteries.gif'
+import CarStartBattery from '../images/battery-start.png';
+import CarBattery from '../images/car_battery.jpeg';
+import TruckStartBattery from '../images/truck_battery.jpeg';
+import ForkLiftBattery from '../images/forklift_battery.jpeg';
+import ForkLiftBatteries from '../images/forklift_batteries.jpeg';
 import BatteriRecondVideoDesktop from '../images/BatteriRecond-video-test.mp4';
 import BatteriRecondVideoMobile from '../images/BatteriRecond-video.mp4';
 const { Header, Content, Footer } = Layout;
@@ -14,76 +18,60 @@ const { Meta } = Card;
 
 const productList = [
   {
-    title : 'Startbatterier',
+    title : 'Startbatterier till bil',
     description : 'Beskrivning',
-    content : 'Vi har alla startbatterier, 20 Ah - 230 Ah',
+    content : 'Vi har nya och rekondade bilbatterier, 45 Ah - 110 Ah',
     detailTitle : '',
     details : [
-      { label: '40 - 60 Ah' , value : '240 kr' },
-      { label: '62 - 75 Ah' , value : '320 kr' },
-      { label: '80 - 100 Ah' , value : '400 kr' },
-      { label: '105 - 140 Ah' , value : '640 kr' },
-      { label: '150 - 180 Ah' , value : '720 kr' },
-      { label: '200 - 230 Ah' , value : '1000 kr' },
+      { label: '45 - 65 Ah' , value : '400 kr' },
+      { label: '65 - 85 Ah' , value : '500 kr' },
+      { label: '85 - 100 Ah' , value : '600 kr' },
+      { label: '100 - 110 Ah' , value : '700 kr' },
     ],
-    imgSrcs : [ StartBattery, StartBattery ],
+    imgSrcs : [ CarStartBattery, CarBattery ],
+  },
+  {
+    title : 'Startbatterier till lastbil',
+    description : 'Beskrivning',
+    content : 'Vi har nya och rekondade lastbilsbatterier, 130 Ah - 230 Ah',
+    detailTitle : '',
+    details : [
+      { label: '130 - 145 Ah' , value : '900 kr' },
+      { label: '145 - 185 Ah' , value : '1000 kr' },
+      { label: '185 - 230 Ah' , value : '1100 kr' },
+    ],
+    imgSrcs : [ TruckStartBattery ],
+  },
+  {
+    title : 'AGM/GEL Förbrukningsbatterier',
+    description : 'Beskrivning',
+    content : 'Vi har rekondade förbrukningsbatterier, 7 Ah - 200 Ah',
+    imgSrcs : [ AgmBattery ],
+    details : [
+      { label: '7 - 200 Ah' , value : '15kr/Ah' },
+      { label: 'Prisexempel:' , value : 'Batteri 100Ah x 15kr = 1500kr' },
+    ],
   },
   {
     title : 'Truckbatterier',
     description : 'Beskrivning',
-    content : <>Stort sortiment
-              <br/>Alla spänningar
-              <br/>Vi monterar nya eller begagnade celler i ditt gamla trucktråg
-              <br/>Färdiga batterier för leverans omgående
-              <br/>Vi anpassar priset efter dina behov och resurser'
-              </>,
-    imgSrcs : [ 'https://lh3.googleusercontent.com/proxy/HQPYOr7JxMh2CbFSRLoeyTm540D5cvA-KrhA-hliAI5CwjbJd-cjGsvy6T81pEQ5psWzZPTKYzRq0e7bQQuaSEI2z_ViXde9dYu3cFFA0LJ2wA', 'https://cdn.klaravik.se/uploads/extrabilder3530344_large.jpg' ],
+    content : 'Vi monterar nya eller begagnade celler i ditt gamla trucktråg och anpassar priset efter dina behov och resurser.',
+    imgSrcs : [ ForkLiftBattery, ForkLiftBatteries ],
     details : [
-      { label: '40 - 60 Ah' , value : '240 kr' },
-      { label: '62 - 75 Ah' , value : '320 kr' },
-      { label: '80 - 100 Ah' , value : '400 kr' },
-      { label: '105 - 140 Ah' , value : '640 kr' },
-      { label: '150 - 180 Ah' , value : '720 kr' },
-      { label: '200 - 230 Ah' , value : '1000 kr' },
-    ],
-  },
-  {
-    title : 'Marinbatterier',
-    description : 'Nya och Begagnade',
-    content : <>
-              50 - 2000 Ah, ubåtsbatterier
-              <br/>Start- och förbrukningsbatterier (servicebatterier)
-              <br/> Belysningsbatterier - alla spänningar
-              <br/> Vi bygger och specialanpassar batteribanker
-              </>,
-    imgSrcs : [ 'https://www.bauhaus.se/media/catalog/product/cache/06447b731d1cbff22138e7150384a1c9/2/5/2519887A.jpg', 'https://rabatterier.se/wp-content/uploads/2016/07/Marinbatteri-300x232.jpg' ],
-    details : [
-      { label: '40 - 60 Ah' , value : '240 kr' },
-      { label: '62 - 75 Ah' , value : '320 kr' },
-      { label: '80 - 100 Ah' , value : '400 kr' },
-      { label: '105 - 140 Ah' , value : '640 kr' },
-      { label: '150 - 180 Ah' , value : '720 kr' },
-      { label: '200 - 230 Ah' , value : '1000 kr' },
+      { label: '150 - 3000 Ah' , value : 'Ring eller maila för prisförslag' },
     ],
   },
   {
     title : 'Truckar',
-    description : '',
+    description : 'Beskrivning',
+    showMoreBtn : false,
+    content : <>
+      Vi har lång erfarehet av att rekonda truckar. <br/>
+      Ring eller maila för aktuella försäljningar.
+    </>,
     imgSrcs : [ ForkLift ],
   },
-  {
-    title : 'Sälj dina battrier till oss',
-    description : '',
-    imgSrcs : [ RegularBatteries ],
-  },
   ];
-  const contentStyle = {
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-  };
 
   const listItemExtra = ( imgSrcs ) =>
   <Carousel>
@@ -113,13 +101,12 @@ const productList = [
         <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 },32]} justify="space-around" style={{margin: 0}} align='baseline'>
         <Col xs={{ span: 0 }} sm={{ span: 0}} md={{ span: 0 }} lg={{ span: 6 }}>
           <div className='side-ad'>
-          <div style={{padding:'2em', wordBreak:'break-all'}}>
-            <h1>
-              DET HÄR EN <br/>
-              LÅNG LÅNG <br/>
-              LTEXT
-              </h1>
-              hallå hallå haklå hdgdajjshdgdgidbkjbfwelhfi
+          <div style={{padding:'2em'}}>
+            <h1><i>
+              BATTERI RECOND, <br/>
+              WATT YOU NEED!<br/>
+            </i></h1>
+              Hos oss finner ni kunnig personal och prisvädra produkter. Vi har de mesta inom branchen.
           </div>
           <video width="100%" autoPlay muted loop src={ BatteriRecondVideoDesktop } type="video/mp4" className='video-ad'/>
           </div>
@@ -166,7 +153,7 @@ const productList = [
         </Row>
       </Content>
       <Footer >
-        Copyright © 2020    Batterirecond Trading i Sverige AB, Järnmalmsgatan 1,  417 07 Göteborg, Tel:  031- 51 81 39
+        Copyright © 2021    Batterirecond Trading i Sverige AB, Gjutjärnsgatan 10,  417 07 Göteborg, Tel:  031- 51 81 39
       </Footer>
     </Layout>
     )

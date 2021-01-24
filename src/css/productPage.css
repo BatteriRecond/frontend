@@ -16,7 +16,7 @@
 }
 
 .product-img {
-  height: 100%;
+  min-height: 200px;
   max-height: 200px;
   margin: auto;
 }
@@ -82,11 +82,11 @@
 }
 
 @keyframes openproduct {
-  from { height: 100px; }
+  from { height: 50px; }
   to { height: auto; }
 }
 
 @keyframes closeproduct {
   from { height: 0; }
-  to { height: 100px; }
+  to { height: 50px; }
 }

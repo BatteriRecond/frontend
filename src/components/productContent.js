@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Descriptions } from 'antd';
 
 export default function ProductContent ( { item } ) {
-  const { content, detailTitle, details = [] } = item;
+  const { content, detailTitle, details, showMoreBtn = true } = item;
   const [ isCollapsed, setIsCollapsed] = useState( true );
 
   return <>
@@ -11,19 +11,19 @@ export default function ProductContent ( { item } ) {
       <br/>
       <br/>
       <br/>
-      <Descriptions title={ detailTitle } bordered column={1}>
+      { details && <Descriptions title={ detailTitle } bordered column={1}>
         { details.map( ( { label, value }, index ) =>
           <Descriptions.Item label={ label }>{ value }</Descriptions.Item>
         )}
-      </Descriptions>
+      </Descriptions> }
     </div>
-    <Button
+    { showMoreBtn && <Button
       block
       className="show-more-btn"
       style={{marginTop: isCollapsed ? '-1em' : 0 }}
       onClick={() => setIsCollapsed( !isCollapsed )}
     >
       Visa { isCollapsed ? 'mer' : 'mindre' }
-    </Button>
+    </Button>}
   </>
 }

@@ -25,7 +25,7 @@ export default class MainPage extends React.Component {
         <Main/>
       </Content>
       <Footer>
-        Copyright © 2020    Batterirecond Trading i Sverige AB, Järnmalmsgatan 1,  417 07 Göteborg, Tel:  031- 51 81 39
+        Copyright © 2021    Batterirecond Trading i Sverige AB, Gjutjärnsgatan 10,  417 07 Göteborg, Tel:  031- 51 81 39
       </Footer>
     </Layout>
     )
@@ -45,9 +45,9 @@ const Main = () => {
   return(
     <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 },32]} justify="space-around" align="middle">
       <Col xs={{span: 0}} sm={{ span: 0}} md={{ span: 0 }} lg={{ order: 1, span: 5, offset:1 }}>
-      <h1>VÄLOMNA TILL OSS <br/>  PÅ RINGÖN </h1>
+      <h1>VÄLKOMNA TILL <br/>GJUTJÄRNSGATAN! </h1>
       <p>
-        Hos oss finner ni kunnig personal och prisvädra produkter. Vi har de mesta inom branchen
+        Vi har flyttat! Därmed hälsar vi er varmt välkomna till oss på Gjutjärnsgatan 10, ett stenkast från vår gamla adress fast med nya fräscha lokaler.
       </p>
       </Col>
     <Col xs={{order:2, span: 24 }} sm={{ order:2, span: 24}} md={{ order:2, span: 24 }} lg={{ order:3, span: 6, }}>

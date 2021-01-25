@@ -10,7 +10,6 @@ const IconText = ({ icon, text }) => (
 );
 
 export default function ProductContent ({ item }) {
-  console.log('item', item)
   const {
     content,
     details: { newPrices, recycledPrices } = {},

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Row, Col, Typography, Card } from 'antd';
-import { MailOutlined, MessageOutlined, PhoneOutlined, HomeOutlined, EnvironmentOutlined } from '@ant-design/icons';
+import { MailOutlined, PhoneOutlined, HomeOutlined, EnvironmentOutlined } from '@ant-design/icons';
 import MainNav from '../components/mainNav.js';
 import '../css/contactPage.css'
 const { Header, Content, Footer } = Layout;
@@ -13,28 +13,28 @@ export default class ContactPage extends React.Component {
       <Layout className="layout">
         <Header className="contact-header">
           <MainNav />
-          <Typography className="typographyContact">
-            <Title>Kontakta oss</Title>
+          <Typography className="typography-contact">
+            <Title className="typography-contact-title">Kontakta oss</Title>
           </Typography>
         </Header>
         <Content className="site-layout-content mobileCss contact-content">
-          <Row gutter={[ { xs: 8, sm: 16, md: 24, lg: 32 }, 8 ]} justify="center" align="top" >
-            <Col xs={{ span: 24 }} sm={{ span: 23 }} md={{ span: 11 }} lg={{ span: 7 }} className="contact-card">
-              <Card title={<h3> <MessageOutlined /> &nbsp; Kontakta oss</h3>} bordered={false}>
-                <p><PhoneOutlined /> &nbsp; <i><a href="tel:031-518139">Tel: 031- 51 81 39</a></i></p>
+          <Row gutter={[ 0, 8 ]} justify="center" align="top">
+            <Col xs={{ span: 24 }} sm={{ span: 23 }} md={{ span: 11 }} lg={{ span: 7 }}>
+              <Card title={<h4> Kontakt</h4>} bordered={false} className="contact-card">
+                <p><PhoneOutlined /> &nbsp; <i><a href="tel:031-518139">031- 51 81 39</a></i></p>
                 <p> <MailOutlined /> &nbsp; <a href="mailto: info@batterirecond.se">info@batterirecond.se</a></p>
               </Card>
             </Col>
-            <Col xs={{ span: 0 }} sm={{ span: 0 }} md={{ span: 0 }} lg={{ span: 7 }} className="contact-card">
-              <Card title={<h3> <HomeOutlined /> &nbsp; Besöksadress</h3>} bordered={false}>
-                <p> Gjutjärnsgatan 10 <br />
+            <Col xs={{ span: 0 }} sm={{ span: 0 }} md={{ span: 0 }} lg={{ span: 7 }}>
+              <Card title={<h4>  Besöksadress</h4>} bordered={false} className="contact-card">
+                <p> <HomeOutlined /> &nbsp; Gjutjärnsgatan 10 <br />
                   Ringön
               </p>
               </Card>
             </Col>
-            <Col xs={{ span: 24 }} sm={{ span: 23 }} md={{ span: 11 }} lg={{ span: 7 }} className="contact-card">
-              <Card title={<h3><EnvironmentOutlined /> &nbsp; Adress</h3>} bordered={false}>
-                <p> Batterirecond Trading i Sverige AB <br />
+            <Col xs={{ span: 24 }} sm={{ span: 23 }} md={{ span: 11 }} lg={{ span: 7 }}>
+              <Card title={<h4>  Adress</h4>} bordered={false} className="contact-card">
+                <p> <EnvironmentOutlined /> &nbsp; Batterirecond Trading i Sverige AB <br />
                   Gjutjärnsgatan 10 <br />
                   417 07 Göteborg
               </p>

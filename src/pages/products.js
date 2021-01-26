@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Layout, Typography, Row, Col, Card, List, Avatar, Button, Carousel, Icon } from 'antd';
+import React from 'react';
+import { Layout, Typography, Row, Col, Card, List, Avatar, Carousel } from 'antd';
 
 import MainNav from '../components/mainNav.js';
 import ProductContent from '../components/productContent.js'
@@ -120,11 +120,14 @@ export default function ProductsPage (props) {
       <Header className="product-header">
         <MainNav />
         <Typography className="typography-products">
-          <Title>Produkter</Title>
+          <Title className="typography-products-title">Produkter</Title>
+          <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 0 }}>
+            <i>Watt you need</i>
+          </Col>
         </Typography>
       </Header>
       <Content className="site-layout-content mobileCss">
-        <Row gutter={[ { xs: 8, sm: 16, md: 24, lg: 32 }, 32 ]} justify="space-around" style={{ margin: 0 }} align='baseline'>
+        <Row gutter={[ { xs: 0, sm: 0, md: 0, lg: 32 }, 32 ]} justify="space-around" style={{ margin: 0 }} align='baseline'>
           <Col xs={{ span: 0 }} sm={{ span: 0 }} md={{ span: 0 }} lg={{ span: 6 }}>
             <div className='side-ad'>
               <div style={{ padding: '2em' }}>

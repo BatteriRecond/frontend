@@ -1,6 +1,6 @@
 
 .mapcontainer{
-  height: 35vh;
+  height: 50vh;
   border-radius: 5px;
   overflow: auto;
   padding-left: 0;
@@ -25,12 +25,15 @@
 }
 
 .contact-content {
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: space-between;
   width: 100vw;
   margin : auto;
   background-color: white;
 }
 
-.typographyContact {
+.typography-contact {
   margin-bottom: 5em;
 }
 
@@ -49,6 +52,12 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .mobileCss {
     background: none;
+  }
+  .typography-contact {
+    margin-bottom: 4em;
+  }
+  h1.typography-contact-title {
+    margin-bottom: 0;
   }
   .contact-content {
     width: 95vw;

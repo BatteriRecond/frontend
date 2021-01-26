@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Typography, Button, Row, Col, Card, Carousel, Rate, Comment, Avatar } from 'antd';
 import { Link } from "react-router-dom";
-import { ClockCircleOutlined, CommentOutlined } from '@ant-design/icons';
+import { ClockCircleOutlined } from '@ant-design/icons';
 import MainNav from '../components/mainNav.js';
 import '../css/mainPage.css';
 
@@ -43,7 +43,7 @@ const reviews = [
 
 const Main = () => {
   return (
-    <Row gutter={[ { xs: 8, sm: 16, md: 24, lg: 32 }, 32 ]} justify="space-around" align="middle" style={{ margin: 0 }}>
+    <Row gutter={[ 0, 32 ]} justify="space-around" align="middle" style={{ margin: 0 }}>
       <Col xs={{ span: 0 }} sm={{ span: 0 }} md={{ span: 0 }} lg={{ order: 1, span: 5, offset: 1 }}>
         <h1>VÄLKOMNA TILL <br />GJUTJÄRNSGATAN! </h1>
         <p>

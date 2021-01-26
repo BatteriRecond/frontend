@@ -18,7 +18,12 @@
   border: none;
   background: none;
   font-size: 20px;
-  padding-top: 1em;
+}
+
+.ant-drawer-body{
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 .drawer-logo-text,

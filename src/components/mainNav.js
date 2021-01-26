@@ -73,7 +73,7 @@ export default function MainNav (props) {
           <Menu.Item className={isActive('products')} key="2"><Link to="/products">PRODUKTER</Link></Menu.Item>
           <Menu.Item className={isActive('contact')} key="3"><Link to="/contact">KONTAKTA OSS</Link></Menu.Item>
         </Menu>
-        <img alt="forklift" src={ForkLift} style={{ maxWidth: '100%', bottom: '150px', position: 'absolute' }} />
+        <img alt="forklift" src={ForkLift} style={{ maxWidth: '100%' }} />
       </Drawer>
     </Row>
   )

@@ -25,8 +25,8 @@ export default class MainPage extends React.Component {
           <Main />
         </Content>
         <Footer>
-          Copyright © 2021    Batterirecond Trading i Sverige AB, Gjutjärnsgatan 10,  417 07 Göteborg, Tel:  031- 51 81 39
-      </Footer>
+          Copyright © 2021    Batterirecond Trading i Sverige AB, Gjutjärnsgatan 10,  417 07 Göteborg, <a href="tel:031-518139">Tel: 031- 51 81 39</a>
+        </Footer>
       </Layout>
     )
   }

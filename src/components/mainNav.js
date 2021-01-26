@@ -65,8 +65,8 @@ export default function MainNav (props) {
         </Link>}
         footer={
           <div>
-            Batterirecond <br /> Gjutjärnsgatan 10 <br />  417 07 Göteborg <br />Tel:  031- 51 81 39
-                </div>
+            Batterirecond <br /> Gjutjärnsgatan 10 <br />  417 07 Göteborg <br /><a href="tel:031-518139">Tel: 031- 51 81 39</a>
+          </div>
         }>
         <Menu className='verticalMenu' mode="vertical">
           <Menu.Item className={isActive('')} key="1"><Link to="/">HEM</Link></Menu.Item>

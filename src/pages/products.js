@@ -46,7 +46,7 @@ const productList = [
     details: {
       newPrices: {
         priceLabel: <h6 className='ant-card'> Priser (Nya batterier) </h6>,
-        prices: [ { label: '130 - 145 Ah', value: 'Kontakta oss för pris' } ]
+        prices: [ { label: '130 - 230 Ah', value: 'Kontakta oss för pris' } ]
       },
       recycledPrices: {
         priceLabel: <h6 className='ant-card'> Priser (Rekondade batterier) </h6>,

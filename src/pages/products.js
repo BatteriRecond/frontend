@@ -32,8 +32,8 @@ const productList = [
         prices:
           [
             { label: '45 - 65 Ah', value: 'fr. 400 kr' },
-            { label: '65 - 85 Ah', value: 'fr. 500 kr' },
-            { label: '85 - 100 Ah', value: 'fr. 600 kr' },
+            { label: '65 - 80 Ah', value: 'fr. 500 kr' },
+            { label: '80 - 100 Ah', value: 'fr. 600 kr' },
             { label: '100 - 110 Ah', value: 'fr. 700 kr' },
           ]
       }

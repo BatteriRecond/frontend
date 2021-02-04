@@ -31,9 +31,9 @@ const productList = [
         priceLabel: <h6 className='ant-card'> Priser (Rekondade batterier) </h6>,
         prices:
           [
-            { label: '45 - 65 Ah', value: 'fr. 400 kr' },
-            { label: '65 - 80 Ah', value: 'fr. 500 kr' },
-            { label: '80 - 100 Ah', value: 'fr. 600 kr' },
+            { label: '45 - 64 Ah', value: 'fr. 400 kr' },
+            { label: '65 - 79 Ah', value: 'fr. 500 kr' },
+            { label: '80 - 99 Ah', value: 'fr. 600 kr' },
             { label: '100 - 110 Ah', value: 'fr. 700 kr' },
           ]
       }
@@ -51,8 +51,8 @@ const productList = [
       recycledPrices: {
         priceLabel: <h6 className='ant-card'> Priser (Rekondade batterier) </h6>,
         prices: [
-          { label: '130 - 145 Ah', value: 'fr. 900 kr' },
-          { label: '145 - 185 Ah', value: 'fr. 1000 kr' },
+          { label: '130 - 144 Ah', value: 'fr. 900 kr' },
+          { label: '145 - 184 Ah', value: 'fr. 1000 kr' },
           { label: '185 - 230 Ah', value: 'fr. 1100 kr' },
         ]
       }

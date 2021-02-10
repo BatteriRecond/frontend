@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 import './App.css';
 import MainPage from './pages/main.js';
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <MainPage />
+          </Route>
+          <Route path="*"> 
+            <Redirect to="/" />
           </Route>
         </Switch>
     </Router>

@@ -85,16 +85,20 @@ const Main = () => {
               <h4 style={{ fontWeight: 'bold' }}>Avvikande Öppettider:</h4>
               <Row>
                 <Col span={12}>
-                  Trettondagsafton Stängt <br />
-              Skärtorsdag Stängt <br />
-              Valborgmässoafton Stängt <br />
-              Dag före Kristi Himmelfärdsdag Stängt <br />
+                  Trettondagen Stängt <br />
+                  Långfredagen Stängt <br />
+                  Annandag Påsk <br />
+                  1 Maj Stängt <br />
+                  Kristi Himmelfärdsdag Stängt <br />
+                  Nationaldagen Stängt <br />
                 </Col>
                 <Col span={12}>
                   Midsommarafton Stängt <br />
-              Dag före Alla Helgons dag Stängt <br />
-              Julafton Stängt <br />
-              Nyårsafton Stängt <br />
+                  Julafton Stängt <br />
+                  Juldagen Stängt <br />
+                  Annandag Jul Stängt <br />
+                  Nyårsafton Stängt <br />
+                  Nyårsdagen Stängt <br />
                 </Col>
               </Row>
             </Col>

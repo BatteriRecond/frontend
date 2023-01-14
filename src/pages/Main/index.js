@@ -7,13 +7,28 @@ import OpeningHours from "../../components/OpeningHours";
 import { MainAd } from "../../components/Advertisement";
 import Footer from "../../components/Footer";
 import { Container } from "../../components/style";
+import { Loader } from "@googlemaps/js-api-loader";
 
 import "./style.css";
 
 const { Header, Content } = Layout;
+const GoogleApiKey = "AIzaSyA9MK5lsAwzn5md2y9Nnk6_pqk-tcMwWGE";
+const placeId = "ChIJsyJ32yv1T0YREQzc2hg_E08";
+const fields = ["opening_hours", "rating"];
 
-const openingHoursUrl =
-  "https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJsyJ32yv1T0YREQzc2hg_E08&fields=opening_hours,rating&key=AIzaSyA9MK5lsAwzn5md2y9Nnk6_pqk-tcMwWGE&language=sv";
+const loader = new Loader({
+  apiKey: GoogleApiKey,
+  version: "weekly",
+  libraries: ["places"],
+});
+
+const request = {
+  placeId,
+  fields,
+  language: "sv",
+};
+
+const openingHoursUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=opening_hours,rating&key=${GoogleApiKey}&language=sv`;
 
 export default class MainPage extends React.Component {
   render() {
@@ -59,16 +74,18 @@ const Main = () => {
   const [rating, setRating] = useState(4.5);
 
   useEffect(() => {
-    axios
-      .get(openingHoursUrl)
-      .then(({ data = {} }) => {
-        if (data.error_message) {
-          console.log(data.error_message);
+    loader.load().then(() => {
+      const service = new google.maps.places.PlacesService(
+        document.createElement("div")
+      );
+      service.getDetails(request, (place) => {
+        if (place.error_message) {
+          console.log(place.error_message);
         }
-        setOpeningHours(data.result.opening_hours);
-        setRating(data.result.rating);
-      })
-      .catch((err = {}) => console.log(err.message));
+        setOpeningHours(place.opening_hours);
+        setRating(place.rating);
+      });
+    });
   }, []);
 
   return (

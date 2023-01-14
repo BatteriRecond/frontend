@@ -1,5 +1,5 @@
 import ForkLift from "../../images/redForklift.png";
-import AgmBattery from "../../images/agm_battery.png";
+import AgmBatteries from "../../images/AGM_Batteries.png";
 import CarStartBattery from "../../images/car-battery.png";
 import CarBattery from "../../images/car_battery.jpeg";
 import TruckStartBattery from "../../images/truck_battery.png";
@@ -54,7 +54,7 @@ export default [
   {
     title: "AGM/GEL Förbrukningsbatterier",
     content: "Vi har rekondade förbrukningsbatterier, 7 Ah - 200 Ah",
-    imgSrcs: [AgmBattery],
+    imgSrcs: [AgmBatteries],
     details: {
       recycledPrices: {
         priceLabel: (

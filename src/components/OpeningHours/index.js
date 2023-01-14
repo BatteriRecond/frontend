@@ -55,14 +55,6 @@ const OpeningHours = ({ openingHours }) => {
             Varmt välkomna till oss på Gjutjärnsgatan 10, ett stenkast från vår
             gamla adress fast med nya fräscha lokaler.
           </p>
-          <p>
-            Just nu har vi:
-            {openingHours.open_now ? (
-              <span style={{ color: "green" }}> Öppet</span>
-            ) : (
-              <span style={{ color: "firebrick" }}> Stängt</span>
-            )}
-          </p>
         </div>
       )}
       <OpeningHoursContainer>

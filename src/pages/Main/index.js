@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Layout, Card, Rate, Row, Col, Statistic, ConfigProvider } from "antd";
-import axios from "axios";
 import { Comment } from "@ant-design/compatible";
 import Menu from "../../components/Menu";
 import OpeningHours from "../../components/OpeningHours";
@@ -27,9 +26,6 @@ const request = {
   fields,
   language: "sv",
 };
-
-const openingHoursUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=opening_hours,rating&key=${GoogleApiKey}&language=sv`;
-
 export default class MainPage extends React.Component {
   render() {
     return (

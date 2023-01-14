@@ -1,39 +1,31 @@
-
 .layout {
-  min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ),url(./images/battery1.jpeg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/battery1.jpeg);
   background-repeat: no-repeat;
   background-size: 100%;
+  background-attachment: fixed;
+  min-height: 100%;
 }
 
-.site-layout-content {
-  height : auto;
-  background-color: white;
-  margin: 0;
-  border-radius: 5px 5px 0 0;
-}
-
-.ant-layout-footer {
-  text-align: center;
-  margin: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-}
-
-.ant-layout-header {
-  height: 50vh;
+.layout .header {
   background: none;
-  line-height: initial;
-  padding: 0;
-  border-radius: 0 0 5px 5px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.layout .footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
   .layout {
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ),url(./images/battery1-copy.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(./images/battery1-copy.jpeg);
     background-size: 100%;
-    background-repeat: repeat-y;
+    background-attachment: fixed;
   }
 }
-

@@ -1,0 +1,24 @@
+.contact-card {
+  text-align: center;
+  background: rgba(250, 250, 250, 0.9);
+}
+
+.contact-content {
+  padding: 100px 20px 0 20px;
+}
+.contact-row {
+  width: 100%;
+  border-radius: 15px;
+  padding: 16px;
+  background: rgb(236, 236, 231);
+}
+.contact-container {
+  border-radius: 15px;
+  padding: 8px;
+}
+
+.maps-container {
+  height: inherit;
+  width: 100%;
+  padding: 8px;
+}

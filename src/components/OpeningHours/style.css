@@ -1,0 +1,12 @@
+.welcome-message {
+  padding: 8px;
+}
+
+.welcome-message h1 {
+  word-break: normal;
+}
+
+.special-opening-hours {
+  margin-top: 16px;
+  color: black;
+}

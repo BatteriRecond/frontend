@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { Button, ConfigProvider, Descriptions, Space } from "antd";
 import {
-  ExclamationCircleOutlined,
   DownOutlined,
+  ExclamationCircleOutlined,
   UpOutlined,
 } from "@ant-design/icons";
+import { Button, ConfigProvider, Descriptions, Space } from "antd";
+import React, { useState } from "react";
+import { Expandable } from "./style";
 
 const IconText = ({ icon, text }) => (
   <Space>
@@ -23,9 +24,7 @@ export default function ProductContent({ item }) {
 
   return (
     <>
-      <div
-        style={{ height: isCollapsed ? "80px" : "auto", overflow: "hidden" }}
-      >
+      <Expandable isCollapsed={isCollapsed}>
         {content}
         <br />
         <br />
@@ -57,7 +56,7 @@ export default function ProductContent({ item }) {
             />
           </>
         )}
-      </div>
+      </Expandable>
       {showMoreBtn && (
         <ConfigProvider theme={{ token: { colorText: "firebrick" } }}>
           <Button

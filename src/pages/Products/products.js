@@ -1,10 +1,10 @@
-import ForkLift from "../../images/redForklift.png";
 import AgmBatteries from "../../images/AGM_Batteries.png";
 import CarStartBattery from "../../images/car-battery.png";
 import CarBattery from "../../images/car_battery.jpeg";
-import TruckStartBattery from "../../images/truck_battery.png";
-import ForkLiftBattery from "../../images/forklift_battery.png";
 import ForkLiftBatteries from "../../images/forklift_batteries.jpeg";
+import ForkLiftBattery from "../../images/forklift_battery.png";
+import ForkLift from "../../images/redForklift.png";
+import TruckStartBattery from "../../images/truck_battery.png";
 
 export default [
   {
@@ -62,7 +62,7 @@ export default [
         ),
         prices: [
           { label: "7 - 200 Ah", value: "15kr/Ah" },
-          { label: "Prisexempel:", value: "Batteri 100Ah x 15kr = 1500kr" },
+          { label: "Prisexempel:", value: "100Ah x 15kr = 1500kr" },
         ],
       },
     },

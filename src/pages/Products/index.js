@@ -1,31 +1,30 @@
-import React from "react";
 import {
   Card,
   Carousel,
   Col,
   ConfigProvider,
+  Grid,
   Layout,
   Row,
   Typography,
 } from "antd";
-
+import React from "react";
+import { VideoAd } from "../../components/Advertisement";
+import Footer from "../../components/Footer";
 import Menu from "../../components/Menu";
 import ProductContent from "../../components/ProcuctContent";
-import Footer from "../../components/Footer";
-
-import "./style.css";
-import productList from "./products";
-import { useMediaQuery } from "react-responsive";
-import { VideoAd } from "../../components/Advertisement";
 import { Container } from "../../components/style";
+import productList from "./products";
+import "./style.css";
 
 const { Header, Content } = Layout;
 const { Title, Paragraph } = Typography;
+const { useBreakpoint } = Grid;
 
 const listItemExtra = (imgSrcs) => (
   <Carousel>
     {imgSrcs.map((imgSrc, index) => (
-      <div key={index}>
+      <div key={index} className="product-img-container">
         <img className="product-img" alt={`img` + index} src={imgSrc} />
       </div>
     ))}
@@ -33,7 +32,7 @@ const listItemExtra = (imgSrcs) => (
 );
 
 export default function ProductsPage() {
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
+  const { sm, xl } = useBreakpoint();
   return (
     <Layout className="layout">
       <Header className="header">
@@ -44,7 +43,7 @@ export default function ProductsPage() {
           theme={{
             token: {
               colorText: "white",
-              fontSizeHeading2: isMobile ? "30px" : "40px",
+              fontSizeHeading2: !sm ? "30px" : "40px",
             },
           }}
         >
@@ -57,10 +56,10 @@ export default function ProductsPage() {
           </Typography>
         </ConfigProvider>
         <Container>
-          {!isMobile && <VideoAd />}
+          {xl && <VideoAd />}
           <Row gutter={[10, 8]} className="product-container">
             {productList.map((item) => (
-              <Col xs={24} sm={24} md={8} lg={8} key={item.title}>
+              <Col xs={24} sm={24} md={12} lg={12} xl={8} key={item.title}>
                 <Card
                   bordered={false}
                   className="product-card"
